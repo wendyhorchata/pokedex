@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="headline">
+        <h2 style="color:orange">Pokemon Edit Page</h2>
+    </div>
+    <form action="/pokemon/<%= x%>?_method=PUT" method="POST">
+        <div class="row">
+            <div class="six columns">
+                <label for="name">Name</label>
+                <input class="u-full-width" type="text" name="name" placeholder="enter pokemon name" value="<%= name%>">
+            </div>
+            <div class="six columns">
+                <label for="image">Image</label>
+                <input class="u-full-width" type="file" name="img" placeholder="upload image"
+                    accept="image/png, image/jpg" value="<%= img%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="type">Type</label>
+                <input class="u-full-width" type="text" name="type" placeholder="enter type" value="<%= type%>">
+            </div>
+        </div>
+      
+        <table>
+            <thead>
+                <tr>
+                    <th> Stats</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter hp" name="hp" value="<%= hp%>">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter attack" name="attack" value="<%= attack%>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter defence" name="defense" value="<%= defense%>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter spattack" name="spattack" value="<%= spattack%>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter spdefense" name="spdefense" value="<%= spdefense%>">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" placeholder="enter speed" name="speed" value="<%= speed%>">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <input style="background-color:goldenrod" type="submit" value="Add">
+    </form>
+</body>
+
+</html>

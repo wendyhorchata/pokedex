@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="headline">
+        <h2 style="color:orange">Pokemon Show Page</h2>
+        <a href="/pokemon" class="button" style="color:teal">Back</a>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><%= pokemon.name%></td>
+                <td>
+                    <img src="<%= pokemon.img%>" alt="pokemon image" height='150' width='150'>
+                </td>
+            </tr>
+            <tr>
+                <th>Type</th>
+
+                <% for (let i = 0; i < pokemon.type.length; i++) { %>
+                <td><%= pokemon.type[i]%></td>
+                <% } %>
+
+            </tr>
+            <tr>
+                <th>Stats</th>
+                <% for (let key in pokemon.stats) {%>
+                <td><%= key%>: <%= pokemon.stats[key]%> </td>
+                <%}%>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+</html>

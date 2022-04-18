@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="headline">
+        <h1>Pokemon Home Page</h1>
+        <button><a href="/pokemon/new" class="btn btn-secondary">Add New Pokemon</a></button>
+    </div>
+    <section>
+        <div id='one'>
+            <table class="table" id='indexPage'>
+                <tbody>
+                    <tr id='element'>
+                        <% for(let i = 0; i < allPokemon.length; i++) { %>
+                        <th id='element'>
+                            <a href="/pokemon/<%= i %>">
+                                <img src="<%= allPokemon[i].img%>" alt="pokemon image" width='100' height='100'>
+                            </a>
+                        </th>
+                        <td height='100' id='element'>
+                            <form action="/pokemon/<%= i %>?_method=DELETE" method="POST" style="padding: 0">
+                                <input type="submit" value="DELETE" />
+                            </form>
+                            <button><a href="/pokemon/<%= i %>/edit" style="padding: 0">EDIT</a></button>
+                            <% } %>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>
